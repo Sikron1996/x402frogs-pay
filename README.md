@@ -1,10 +1,9 @@
-# x402frogs-pay-coinbase
+# x402frogs-pay-coinbase-v2
 
-X402 payment backend for minting NFTs with USDC (Base) using Coinbase Facilitator.
+Updated X402 payment backend using Coinbase Facilitator (2025 schema).
 
-## Endpoints
-- `/api/mint?id=1` → Returns 402 JSON challenge
+## Endpoint
+- `/api/mint?id=1` → Returns valid 402 JSON challenge compatible with latest X402 standard.
 
 ## Deployment
-1. Push to GitHub or deploy on Vercel / Railway / Netlify.
-2. Test your endpoint on [x402scan.com](https://x402scan.com).
+Deploy to Vercel / Netlify / Railway and verify on [x402scan.com](https://x402scan.com).

@@ -11,12 +11,22 @@ export default function handler(req, res) {
     facilitator: "https://facilitator.coinbase.com/x402/confirm",
     accepts: [
       {
+        scheme: "pay",
+        network: "base",
         resource: "erc20:0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         chain: "base",
+        asset: "USDC",
+        symbol: "USDC",
         amount: "1000000",
         decimals: 6,
-        symbol: "USDC",
-        receiver: "0x1DEf6d9E7ba7256dF17d01Bf7D8FA62d82A27Fc4"
+        maxAmountRequired: true,
+        description: "Pay 1 USDC on Base to mint x402frogs collectible",
+        mimeType: "application/vnd.x402+json",
+        receiver: "0x1DEf6d9E7ba7256dF17d01Bf7D8FA62d82A27Fc4",
+        payTo: [
+          { address: "0x1DEf6d9E7ba7256dF17d01Bf7D8FA62d82A27Fc4", chain: "base" }
+        ],
+        maxTimeoutSeconds: 600
       }
     ],
     metadata: {
