@@ -19,14 +19,16 @@ export default function handler(req, res) {
         symbol: "USDC",
         amount: "1000000",
         decimals: 6,
-        maxAmountRequired: "true",
+        maxAmountRequired: 1,
         description: "Pay 1 USDC on Base to mint x402frogs collectible",
         mimeType: "application/vnd.x402+json",
-        receiver: "0x1DEf6d9E7ba7256dF17d01Bf7D8FA62d82A27Fc4",
-        payTo: {
-          address: "0x1DEf6d9E7ba7256dF17d01Bf7D8FA62d82A27Fc4",
-          chain: "base"
-        },
+        payTo: [
+          {
+            address: "0x1DEf6d9E7ba7256dF17d01Bf7D8FA62d82A27Fc4",
+            chain: "base",
+            amount: "1000000"
+          }
+        ],
         maxTimeoutSeconds: 600
       }
     ],
